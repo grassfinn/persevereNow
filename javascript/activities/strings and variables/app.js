@@ -15,7 +15,7 @@ function handleClick(e) {
   // ! change the increase variable value to any  positive number
   const increaseScore = 5;
 
-  // ! change the increase variable value to any  negative number
+  // ! change the decrease variable value to any  negative number
   const decreaseScore = -5;
 
   // Do not change code under here

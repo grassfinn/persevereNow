@@ -1,99 +1,14 @@
 // https://byby.dev/node-download-image
+// https://www.amiiboapi.com/
 const https = require('https');
 const fs = require('fs');
 const fetch = require('node-fetch');
 
-const arr = [
-  'PIRANHA PLANT',
-  'JOKER',
-  'HERO',
-  //   'BANJO & KAZOOIE',
-  'TERRY',
-  'BYLETH',
-  'MIN MIN',
-  'STEVE',
-  'SEPHIROTH',
-  //   'PYRA / MYTHRA',
-  'KAZUYA',
-  'SORA',
-  'MARIO',
-  'DONKEY KONG',
-  'LINK',
-  'SAMUS',
-  'DARK SAMUS',
-  'YOSHI',
-  'KIRBY',
-  'FOX',
-  'PIKACHU',
-  'LUIGI',
-  'NESS',
-  'CAPTAIN\nFALCON',
-  'JIGGLYPUFF',
-  'PEACH',
-  'DAISY',
-  'BOWSER',
-  'ICE CLIMBERS',
-  'SHEIK',
-  'ZELDA',
-  'DR. MARIO',
-  'PICHU',
-  'FALCO',
-  'MARTH',
-  'LUCINA',
-  'YOUNG LINK',
-  'GANONDORF',
-  'MEWTWO',
-  'ROY',
-  'CHROM',
-//   'MR. GAME\n& WATCH',
-  'META KNIGHT',
-  'PIT',
-  'DARK PIT',
-  'ZERO SUIT SAMUS',
-  'WARIO',
-  'SNAKE',
-  'IKE',
-//   'POKÉMON\nTRAINER\n\nSquirtle/Ivysaur/Charizard',
-  'DIDDY KONG',
-  'LUCAS',
-  'SONIC',
-  'KING DEDEDE',
-  'OLIMAR',
-  'LUCARIO',
-//   'R.O.B.',
-  'TOON LINK',
-  'WOLF',
-  'VILLAGER',
-  'MEGA MAN',
-  'Wii Fit TRAINER',
-//   'ROSALINA & LUMA',
-  'LITTLE MAC',
-  'GRENINJA',
-  //   'Mii FIGHTER\n\nBrawler / Swordfighter / Gunner',
-  'PALUTENA',
-  'PAC-MAN',
-  'ROBIN',
-  'SHULK',
-  'BOWSER JR.',
-  'DUCK HUNT',
-  'RYU',
-  'KEN',
-  'CLOUD',
-  'CORRIN',
-  'BAYONETTA',
-  'INKLING',
-  'RIDLEY',
-  'SIMON',
-  'RICHTER',
-//   'KING K. ROOL',
-  'ISABELLE',
-  'INCINEROAR',
-];
+// const characterList = ['mario', 'zelda', 'link'];
+// const characterObject = [];
 
-const characterList = ['mario', 'zelda', 'link'];
-const characterObject = [];
-
-const apiLink = 'https://www.amiiboapi.com/api/amiibo/?name=';
+// const apiLink = 'https://www.amiiboapi.com/api/amiibo/?name=';
+const fullList = 'https://amiiboapi.com/api/amiibo/';
 
 async function fetchCharacter(name) {
   const data = await fetch(apiLink + name);

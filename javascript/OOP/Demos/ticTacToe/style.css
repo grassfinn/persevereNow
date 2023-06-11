@@ -1,0 +1,21 @@
+.game-container {
+  /* border: 2px solid black; */
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: lavender;
+
+}
+

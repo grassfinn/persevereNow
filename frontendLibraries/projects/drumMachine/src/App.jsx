@@ -1,10 +1,8 @@
 import './App.css';
 import React from 'react';
-import DrumPad from './components/drumPad';
 
-function App() {
+export default function App() {
   const [volume, setVolume] = React.useState(0.5);
-  // const [recording, setRecording] = React.useState('')
   const heaterKit = [
     {
       id: 'heater-1',
@@ -54,12 +52,53 @@ function App() {
   ];
 
   function handleChange(e) {
-    setVolume(e.target.value);
+    setVolume(parseFloat(e.target.value));
   }
 
-  const drumPad = heaterKit.map((sound, index) => (
+  const samples = heaterKit.map((sounds) => {
+    sounds.volume = volume;
+    return sounds;
+  });
+
+  function DrumPad(props) {
+    function play() {
+      let volume = props.volume;
+      const sample = document.getElementById(props.soundName);
+      console.log(props);
+      sample.volume = volume;
+      sample.currentTime = 0;
+      sample.play();
+    }
+
+    //   if key pressed is equal to an sample,
+    // play the sample
+    function handlePress(e) {
+      if (e.key === props.id) {
+        play();
+      }
+    }
+
+    // need to add the event listener to the componenet
+    React.useEffect(() => {
+      document.addEventListener('keydown', handlePress);
+      return () => document.removeEventListener('keydown', handlePress);
+    }, []);
+    return (
+      <button id={props.id} onClick={play}>
+        <audio
+          id={props.soundName}
+          className="clip"
+          src={props.sound}
+          type="audio/mpeg"
+        ></audio>
+        <p>{props.drumKey}</p>
+      </button>
+    );
+  }
+
+  const drumPad = samples.map((sound, index) => (
     <DrumPad
-      volume={volume}
+      volume={sound.volume}
       key={index}
       id={sound.key}
       soundName={sound.id}
@@ -84,4 +123,3 @@ function App() {
   );
 }
 
-export default App;

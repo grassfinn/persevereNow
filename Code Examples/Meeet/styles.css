@@ -1,0 +1,21 @@
+main {
+    position: relative;
+}
+
+main img {
+    position: absolute;
+}
+
+.img1 {
+    left: 500px;
+}
+.img2 {
+    bottom: 100px;
+}
+.img3 {
+    left: 200px;
+    bottom: 300px;
+}
+.img4 {
+    
+}

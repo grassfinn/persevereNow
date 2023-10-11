@@ -60,3 +60,21 @@ img {
 .red {
   border-top-color: orangered;
 }
+
+/* Desktop */
+@media (min-width: 800px){
+ .flex-row {
+  display: flex;
+ }
+
+ .card {
+  width: 70%;
+ }
+ .col-2 {
+  position: relative;
+  bottom: 100px;
+ }
+ main {
+  margin-top: 10rem;
+ }
+}

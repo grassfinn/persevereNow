@@ -47,6 +47,11 @@ div {
 
 .a{
     grid-area: header;
+    transition: .5s;
+  }
+  .a:hover {
+  scale: 1.5;
+  background-color: chartreuse;
 }
 .b {
     grid-area: article;
@@ -61,4 +66,22 @@ div {
 
 .e {
     grid-area: footer;
+}
+
+button {
+  padding: 1em;
+  border: none;
+  background-color: aquamarine;
+  transition: .5s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button:hover {
+  scale: 1.1;
+  cursor:pointer;
+}
+button:focus {
+  background-color: blueviolet;
+}
+button:active {
+  background-color: brown;
 }

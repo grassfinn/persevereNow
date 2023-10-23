@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forms</title>
+    <!-- link element -> rel='stylesheet' -> href="location of stylesheet" -->
+    <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
     <form action="" method="" autocomplete="on">
       <fieldset>
         <!-- text input allows the user to type any text in the input field -->
+        <h1 id="welcome" class="form" >Welcome to my Form</h1>
+        <h1>ENJOY!</h1>
         <h2>Text Inputs</h2>
         <label for="fName">First Name</label>
         <input type="text" name="fName" id="fName" />
@@ -19,7 +23,7 @@
         <input type="text" name="lName" id="lName" />
         <br />
         <br />
-        <label for="age">Enter your age</label>
+        <label for="age" class="form">Enter your age</label>
         <input type="number" name="age" id="age" />
         <br />
         <br />
@@ -31,7 +35,7 @@
         <input type="tel" name="phone" id="phone" />
         <br />
         <br />
-        <label for="password">Create a Password</label>
+        <label class="form"  for="password">Create a Password</label>
         <input type="password" name="password" id="password" />
         <h2> Button Inputs</h2>
         <p>What is your favorite flavor of ice cream?</p>
@@ -42,7 +46,7 @@
         <input type="checkbox" id="choc">
         <!-- radio button -->
         <!-- radio group needs to have the same name attribute -->
-        <p>Did you enjoy your time at the restaraunt</p>
+        <p class="form">Did you enjoy your time at the restaraunt</p>
         <label for="yes" value="">Yes</label>
         <input type="radio" id="yes" name="yes">
         <label for="no" value="">No</label>

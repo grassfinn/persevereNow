@@ -1,0 +1,29 @@
+
+
+label {
+    /* color is for text color of that element */
+    color: red;
+    /* font size is the text size of that element */
+    font-size: 20px;
+}
+
+fieldset {
+    background-color: burlywood;
+}
+
+body {
+    background-color: blanchedalmond;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* DRY Do Not Repeat yourself */
+h1, h2, p {
+    color: lawngreen;
+}
+
+/* IDs only can have the specified name once! */
+/* # is for IDs . is for Classes */
+/* ClASSes can be used as many times as you want! */
+.form {
+    color: purple;
+}

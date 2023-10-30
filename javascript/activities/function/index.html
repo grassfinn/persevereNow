@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <script src="./randomNumberGuessingGame.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="conatiner">
+      <h1 id="title">Can you guess the right number?</h1>
+      <h2 id="hint"> &nbsp;</h2>
+      <h2 id="randomNumber">???</h2>
+      <h3>Previous Guess: <span id="previous"></span></h3>
+      <h3>Attempts: <span id="attempts">0</span></h3>
+      <input type="number" id="userInput" />
+      <button id="guessBtn">GUESS!</button>
+      <button id="resetBtn">RESET</button>
+    </div>
+    <script type="text/javascript" src="./randomNumberGuessingGame.js"></script>
+  </body>
 </html>
